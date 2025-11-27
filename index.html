@@ -218,6 +218,8 @@
       cursor: pointer;
       transition: all 0.3s ease;
       font-size: 14px;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .btn-primary {
@@ -407,26 +409,123 @@
     }
 
     @media (max-width: 640px) {
-      .main-title {
+      .header {
+        padding: 40px 15px 60px;
+      }
+
+      .avatar {
+        width: 60px;
+        height: 60px;
         font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .main-title {
+        font-size: 24px;
+        margin-bottom: 10px;
       }
 
       .subtitle {
-        font-size: 16px;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      .content-wrapper {
+        padding: 0 15px 40px;
+        margin-top: -30px;
+      }
+
+      .module-tabs {
+        padding: 8px;
+        gap: 8px;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
       }
 
       .module-tab {
-        min-width: 140px;
-        padding: 14px 16px;
-        font-size: 13px;
+        min-width: 120px;
+        padding: 12px 16px;
+        font-size: 12px;
+      }
+
+      .module-number {
+        font-size: 10px;
+        margin-bottom: 3px;
+      }
+
+      .video-section {
+        border-radius: 12px;
       }
 
       .video-player {
-        height: 300px;
+        height: 280px;
+        border-radius: 12px 12px 0 0;
+      }
+
+      .video-info {
+        padding: 20px;
+      }
+
+      .current-lesson-title {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+
+      .lesson-description {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+
+      .action-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 15px;
+      }
+
+      .sidebar {
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      .sidebar-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+
+      .lesson-item {
+        padding: 12px;
+        margin-bottom: 8px;
+      }
+
+      .lesson-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 11px;
+      }
+
+      .lesson-name {
+        font-size: 13px;
+        white-space: normal;
+        line-height: 1.4;
       }
 
       .overview-grid {
         grid-template-columns: 1fr;
+      }
+
+      .footer {
+        padding: 25px 15px;
+        margin-top: 40px;
+      }
+
+      .footer-text {
+        font-size: 12px;
+        line-height: 1.5;
       }
     }
   </style>
@@ -465,42 +564,42 @@
       <div class="video-info">
        <h2 class="current-lesson-title" id="currentLessonTitle">À savoir</h2>
        <p class="lesson-description">Introduction aux concepts fondamentaux de la trigonométrie. Cette leçon couvre les bases essentielles que vous devez maîtriser avant d'aborder les chapitres suivants.</p>
-       <div class="action-buttons"><button class="btn btn-primary">📄 Télécharger le PDF</button> <button class="btn btn-secondary">📝 Prendre des notes</button>
+       <div class="action-buttons"><a href="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO" target="_blank" class="btn btn-primary">📄 Télécharger le PDF</a> <button class="btn btn-secondary">📝 Prendre des notes</button>
        </div>
       </div>
      </div>
      <aside class="sidebar">
       <h3 class="sidebar-title">Leçons du module</h3>
       <ul class="lessons-list">
-       <li class="lesson-item active" data-video="94RjAC-oMRQ" data-module="1">
+       <li class="lesson-item active" data-video="Y1B0GGrV5OQ" data-module="1" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          1
         </div>
         <div class="lesson-info">
          <p class="lesson-name">À savoir</p>
         </div></li>
-       <li class="lesson-item" data-video="dCDYW49kkc0" data-module="1">
+       <li class="lesson-item" data-video="dCDYW49kkc0" data-module="1" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          2
         </div>
         <div class="lesson-info">
          <p class="lesson-name">Définition géométrique</p>
         </div></li>
-       <li class="lesson-item" data-video="0tn1C9oo3K4" data-module="1">
+       <li class="lesson-item" data-video="0tn1C9oo3K4" data-module="1" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          3
         </div>
         <div class="lesson-info">
          <p class="lesson-name">Formules de base</p>
         </div></li>
-       <li class="lesson-item" data-video="r6vNj67UV3A" data-module="1">
+       <li class="lesson-item" data-video="r6vNj67UV3A" data-module="1" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          4
         </div>
         <div class="lesson-info">
          <p class="lesson-name">Formules d'angles associés</p>
         </div></li>
-       <li class="lesson-item" data-video="-U_xS9rfuwQ" data-module="1">
+       <li class="lesson-item" data-video="-U_xS9rfuwQ" data-module="1" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          5
         </div>
@@ -517,42 +616,42 @@
       <div class="video-info">
        <h2 class="current-lesson-title">Formules d'addition et de soustraction</h2>
        <p class="lesson-description">Découvrez les formules essentielles d'addition et de soustraction qui sont la base de nombreux calculs trigonométriques avancés.</p>
-       <div class="action-buttons"><button class="btn btn-primary">📄 Télécharger le PDF</button> <button class="btn btn-secondary">📝 Prendre des notes</button>
+       <div class="action-buttons"><a href="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO" target="_blank" class="btn btn-primary">📄 Télécharger le PDF</a> <button class="btn btn-secondary">📝 Prendre des notes</button>
        </div>
       </div>
      </div>
      <aside class="sidebar">
       <h3 class="sidebar-title">Leçons du module</h3>
       <ul class="lessons-list">
-       <li class="lesson-item active" data-video="ZeJC9IT6DvI" data-module="2">
+       <li class="lesson-item active" data-video="ZeJC9IT6DvI" data-module="2" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          1
         </div>
         <div class="lesson-info">
          <p class="lesson-name">Formules d'addition et de soustraction</p>
         </div></li>
-       <li class="lesson-item" data-video="Py4i513YGCw" data-module="2">
+       <li class="lesson-item" data-video="Py4i513YGCw" data-module="2" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          2
         </div>
         <div class="lesson-info">
          <p class="lesson-name">Formules des angles doubles et triples</p>
         </div></li>
-       <li class="lesson-item" data-video="ivub5Gw5ICg" data-module="2">
+       <li class="lesson-item" data-video="ivub5Gw5ICg" data-module="2" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          3
         </div>
         <div class="lesson-info">
          <p class="lesson-name">Expressions en fonction de tg (α/2)</p>
         </div></li>
-       <li class="lesson-item" data-video="strsjuXQoQg" data-module="2">
+       <li class="lesson-item" data-video="strsjuXQoQg" data-module="2" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          4
         </div>
         <div class="lesson-info">
          <p class="lesson-name">Formules de Simpson</p>
         </div></li>
-       <li class="lesson-item" data-video="IZe6vfxoSLU" data-module="2">
+       <li class="lesson-item" data-video="IZe6vfxoSLU" data-module="2" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          5
         </div>
@@ -569,21 +668,21 @@
       <div class="video-info">
        <h2 class="current-lesson-title">Triangles rectangles</h2>
        <p class="lesson-description">Apprenez à résoudre tous les types de triangles rectangles en utilisant les rapports trigonométriques et le théorème de Pythagore.</p>
-       <div class="action-buttons"><button class="btn btn-primary">📄 Télécharger le PDF</button> <button class="btn btn-secondary">📝 Prendre des notes</button>
+       <div class="action-buttons"><a href="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO" target="_blank" class="btn btn-primary">📄 Télécharger le PDF</a> <button class="btn btn-secondary">📝 Prendre des notes</button>
        </div>
       </div>
      </div>
      <aside class="sidebar">
       <h3 class="sidebar-title">Leçons du module</h3>
       <ul class="lessons-list">
-       <li class="lesson-item active" data-video="nAlNUA_74jo" data-module="3">
+       <li class="lesson-item active" data-video="nAlNUA_74jo" data-module="3" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          1
         </div>
         <div class="lesson-info">
          <p class="lesson-name">Triangles rectangles</p>
         </div></li>
-       <li class="lesson-item" data-video="14QJ3XswjFQ" data-module="3">
+       <li class="lesson-item" data-video="14QJ3XswjFQ" data-module="3" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          2
         </div>
@@ -600,21 +699,21 @@
       <div class="video-info">
        <h2 class="current-lesson-title">Résolution des équations trigonométriques élémentaires</h2>
        <p class="lesson-description">Maîtrisez les techniques de résolution des équations trigonométriques simples : sin x = a, cos x = b, tan x = c.</p>
-       <div class="action-buttons"><button class="btn btn-primary">📄 Télécharger le PDF</button> <button class="btn btn-secondary">📝 Prendre des notes</button>
+       <div class="action-buttons"><a href="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO" target="_blank" class="btn btn-primary">📄 Télécharger le PDF</a> <button class="btn btn-secondary">📝 Prendre des notes</button>
        </div>
       </div>
      </div>
      <aside class="sidebar">
       <h3 class="sidebar-title">Leçons du module</h3>
       <ul class="lessons-list">
-       <li class="lesson-item active" data-video="X4abXl_jiFc" data-module="4">
+       <li class="lesson-item active" data-video="X4abXl_jiFc" data-module="4" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          1
         </div>
         <div class="lesson-info">
          <p class="lesson-name">Résolution des équations élémentaires</p>
         </div></li>
-       <li class="lesson-item" data-video="J0o6Szszyrs" data-module="4">
+       <li class="lesson-item" data-video="J0o6Szszyrs" data-module="4" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          2
         </div>
@@ -631,21 +730,21 @@
       <div class="video-info">
        <h2 class="current-lesson-title">Définitions des fonctions cyclométriques</h2>
        <p class="lesson-description">Introduction aux fonctions réciproques : arcsin, arccos et arctan. Comprenez leurs définitions, domaines et propriétés essentielles.</p>
-       <div class="action-buttons"><button class="btn btn-primary">📄 Télécharger le PDF</button> <button class="btn btn-secondary">📝 Prendre des notes</button>
+       <div class="action-buttons"><a href="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO" target="_blank" class="btn btn-primary">📄 Télécharger le PDF</a> <button class="btn btn-secondary">📝 Prendre des notes</button>
        </div>
       </div>
      </div>
      <aside class="sidebar">
       <h3 class="sidebar-title">Leçons du module</h3>
       <ul class="lessons-list">
-       <li class="lesson-item active" data-video="Y1B0GGrV5OQ" data-module="5">
+       <li class="lesson-item active" data-video="Y1B0GGrV5OQ" data-module="5" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          1
         </div>
         <div class="lesson-info">
          <p class="lesson-name">Définitions des fonctions cyclométriques</p>
         </div></li>
-       <li class="lesson-item" data-video="me5XkXvfd34" data-module="5">
+       <li class="lesson-item" data-video="me5XkXvfd34" data-module="5" data-pdf="https://drive.google.com/uc?export=download&amp;id=1_HVgLOS2fGsqiVE4dy8KvMGJQuWavXnO">
         <div class="lesson-icon">
          2
         </div>
@@ -694,7 +793,7 @@
       });
     });
 
-    // Lesson items click - with video switching
+    // Lesson items click - with video switching and PDF link update
     document.querySelectorAll('.lesson-item').forEach(item => {
       item.addEventListener('click', function() {
         const parent = this.closest('.module-content');
@@ -709,6 +808,13 @@
         if (videoId) {
           const videoPlayer = parent.querySelector('.video-player');
           videoPlayer.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 0;"></iframe>`;
+        }
+
+        // Update PDF link
+        const pdfUrl = this.getAttribute('data-pdf');
+        if (pdfUrl) {
+          const pdfButton = parent.querySelector('.btn-primary');
+          pdfButton.setAttribute('href', pdfUrl);
         }
       });
     });
@@ -829,5 +935,5 @@
       });
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a4cfa0162e1b9c0',t:'MTc2NDE5Nzc2MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a520fa1b053b9c0',t:'MTc2NDI1MTA3NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
